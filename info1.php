@@ -17,7 +17,7 @@ $csvFile = fopen($_FILES['file']['tmp_name'], 'r');
 while($data = fgetcsv($csvFile))
 
 {
-$name = mysql_real_escape_string($conn, $data[0]);
+    $name = mysql_real_escape_string($conn, $data[0]);
     $status = mysql_real_escape_string($conn, $data[1]);
     $salesper = mysql_real_escape_string($conn, $data[2]);
     $updated = mysql_real_escape_string($conn, $data[3]);
